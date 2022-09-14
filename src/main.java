@@ -5,5 +5,3 @@ public class main {
         menu.main(args);
     }
 }
-
-// test
