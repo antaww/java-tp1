@@ -7,6 +7,9 @@ public class exo4 {
         float finalN = utils.getPositiveInt();
         float Un = 1;
         for (float n = 1; n <= finalN; n++) {
+            System.out.println("finalN"+finalN);
+            System.out.println("Un"+Un);
+            System.out.println("n"+n);
             Un = (Un+1)/n;
         }
         System.out.println(Un);
