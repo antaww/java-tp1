@@ -18,7 +18,7 @@ public class exo6 {
         double[][] tableau = new double[taille][taille];
         for (int i = 0; i < taille; i++) {
             for (int j = 0; j < taille; j++) {
-                System.out.println("Entrez la valeur de la case [" + (i+1) + "] [" + (j+1) + "] :");
+                System.out.println("Entrez la valeur de la case [" + (i+1) + " , " + (j+1) + "] :");
                 tableau[i][j] = utils.utils.getDouble();
             }
         }
