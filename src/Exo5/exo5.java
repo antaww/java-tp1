@@ -2,8 +2,6 @@ package Exo5;
 
 import utils.utils;
 
-import java.util.Arrays;
-
 public class exo5 {
     public static void main(String[] args) {
         System.out.println("Entrez la taille du tableau (0 pour terminer) :");
