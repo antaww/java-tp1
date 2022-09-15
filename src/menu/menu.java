@@ -1,5 +1,6 @@
 package menu;
 
+import Exo2.exo2;
 import Exo3.exo3;
 import Exo4.exo4;
 import utils.utils;
@@ -16,7 +17,7 @@ public class menu {
         String choix = utils.getString();
         switch (choix) {
             case "1" -> exo1.main(args);
-            case "2" -> System.out.print("Exercice 2");
+            case "2" -> exo2.main(args);
             case "3" -> exo3.main(args);
             case "4" -> exo4.main(args);
             case "0" -> {
