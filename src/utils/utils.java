@@ -31,6 +31,18 @@ public class utils {
         return choix;
     }
 
+    public static double getDouble() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("> ");
+        while (!scanner.hasNextDouble()) {
+            System.out.println("Veuillez entrer un nombre");
+            System.out.print("> ");
+            scanner.next();
+        }
+        double choix = scanner.nextDouble();
+        return choix;
+    }
+
     public static int getPositiveInt() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("> ");

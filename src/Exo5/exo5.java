@@ -13,7 +13,7 @@ public class exo5 {
         } else {
             for (int i = 1; i < arrayLength+1; i++) {
                 System.out.println("Entrez la valeur " + i + " :");
-                int arrayValue = utils.getInt();
+                double arrayValue = utils.getDouble();
                 array[i-1] = arrayValue;
             }
         }
