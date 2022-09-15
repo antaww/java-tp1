@@ -32,10 +32,22 @@ public class utils {
         }
         int choix = scanner.nextInt();
         if (choix < 0) {
-            System.out.println("Veuillez entrer un nombre positif");
+            System.out.println("Erreur, la valeur ne peut pas être négative");
             return getPositiveInt();
         }
         return choix;
+    }
+    public static void SystemOut() {
+        System.out.print("Au revoir");
+        for (int i = 0; i < 3; i++) {
+            try {
+                Thread.sleep(400);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.print(".");
+        }
+        System.exit(0);
     }
 }
 

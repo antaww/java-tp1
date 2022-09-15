@@ -18,16 +18,7 @@ public class menu {
             case "3" -> System.out.print("Exercice 3");
             case "4" -> System.out.print("Exercice 4");
             case "0" -> {
-                System.out.print("Au revoir");
-                for (int i = 0; i < 3; i++) {
-                    try {
-                        Thread.sleep(400);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    System.out.print(".");
-                }
-                System.exit(0);
+                utils.SystemOut();
             }
             default -> {
                 System.out.println("Choix invalide");
