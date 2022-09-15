@@ -20,7 +20,22 @@ public class utils {
         }
         int choix = scanner.nextInt();
         return choix;
+    }
 
+    public static int getPositiveInt() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("> ");
+        while (!scanner.hasNextInt()) {
+            System.out.println("Veuillez entrer un nombre");
+            System.out.print("> ");
+            scanner.next();
+        }
+        int choix = scanner.nextInt();
+        if (choix < 0) {
+            System.out.println("Veuillez entrer un nombre positif");
+            return getPositiveInt();
+        }
+        return choix;
     }
 }
 
