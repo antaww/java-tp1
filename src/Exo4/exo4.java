@@ -9,6 +9,6 @@ public class exo4 {
         for (float n = 1; n <= finalN; n++) {
             Un = (Un+1)/n;
         }
-        System.out.println(Un);
+        System.out.println("Le terme n°" + (int) finalN + " de la suite est " + Math.round(Un * 10000.0) / 10000.0);
     }
 }
