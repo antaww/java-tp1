@@ -1,8 +1,16 @@
+// Réalisé par :
+// - Olivier MISTRAL
+// - Antoine PIZZETTA
+
 package Exo5;
 
 import utils.utils;
 
 public class exo5 {
+    /**
+     * Il demande à l'utilisateur la taille d'un tableau, puis demande les valeurs de chaque élément du tableau, puis
+     * ajoute tous les éléments du tableau et imprime le résultat
+     */
     public static void main(String[] args) {
         System.out.println("Entrez la taille du tableau (0 pour terminer) :");
         int arrayLength = utils.getPositiveInt();

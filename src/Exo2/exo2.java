@@ -1,8 +1,15 @@
+// Réalisé par :
+// - Olivier MISTRAL
+// - Antoine PIZZETTA
+
 package Exo2;
 
 import utils.utils;
 
 public class exo2 {
+    /**
+     * Il imprime un arbre avec une hauteur de nbr, où nbr est le nombre de lignes de l'arbre
+     */
     public static void main(String[] args) {
         System.out.println("Hauteur de l'arbre :");
         int nbr = utils.getPositiveInt();
@@ -28,6 +35,11 @@ public class exo2 {
         trunk(rowCount);
     }
 
+    /**
+     * Il imprime le tronc de l'arbre
+     *
+     * @param rowCount le nombre de lignes dans l'arbre
+     */
     private static void trunk(int rowCount) {
         System.out.println();
         for (int j = 1; j <= rowCount +3 - 1; j++) {

@@ -1,7 +1,14 @@
+// Réalisé par :
+// - Olivier MISTRAL
+// - Antoine PIZZETTA
+
 package Exo4;
 import utils.utils;
 
 public class exo4 {
+    /**
+     * Il calcule le nième terme de la suite U(n) = (U(n-1)+1)/n avec U(0) = 1
+     */
     public static void main(String[] args) {
         System.out.println("Entrez le nombre de terme de la suite n à calculer avec n > 0 (0 pour terminer) :");
         float finalN = utils.getPositiveInt();

@@ -1,6 +1,14 @@
+// Réalisé par :
+// - Olivier MISTRAL
+// - Antoine PIZZETTA
+
 package Exo6;
 
 public class exo6 {
+    /**
+     * Il demande à l'utilisateur la taille du tableau, puis demande les valeurs de chaque cellule, puis imprime le tableau
+     * avec la somme de chaque ligne et colonne, et enfin la somme de l'ensemble du tableau
+     */
     public static void main(String[] args) {
         System.out.println("Entrez la taille du tableau (0 pour terminer) :");
         int taille = utils.utils.getPositiveInt();

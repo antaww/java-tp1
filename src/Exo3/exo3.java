@@ -1,7 +1,15 @@
+// Réalisé par :
+// - Olivier MISTRAL
+// - Antoine PIZZETTA
+
 package Exo3;
 import utils.utils;
 
 public class exo3 {
+    /**
+     * Il demande à l'utilisateur de choisir entre convertir un nombre binaire en nombre décimal ou un nombre décimal en
+     * nombre binaire, puis il appelle la fonction appropriée
+     */
     public static void main(String[] args) {
         System.out.println("Voulez-vous convertir :");
         System.out.println("1. un nombre binaire en décimal");

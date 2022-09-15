@@ -1,3 +1,7 @@
+// Réalisé par :
+// - Olivier MISTRAL
+// - Antoine PIZZETTA
+
 package menu;
 
 import Exo1.exo1;
@@ -8,7 +12,15 @@ import Exo5.exo5;
 import Exo6.exo6;
 import utils.utils;
 
+/**
+ * Il imprime un menu, demande à l'utilisateur de choisir un exercice, puis appelle la fonction principale de l'exercice
+ * choisi
+ */
 public class menu {
+    /**
+     * Il imprime un menu, demande à l'utilisateur de choisir un exercice, puis appelle la fonction principale de
+     * l'exercice choisi
+     */
     public static void main(String[] args) {
         System.out.println("Choisissez un exercice :");
         System.out.println("1. Exercice 1");
