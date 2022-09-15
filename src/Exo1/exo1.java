@@ -1,4 +1,5 @@
 package Exo1;
+
 import static java.lang.Math.sqrt;
 
 import utils.utils;
@@ -15,7 +16,5 @@ public class exo1 {
         System.out.println("La racine carrée de " + nbr + " est " + Math.round(racine * 1000000.0) / 1000000.0);
         exo1.main(args);
     }
-
-
 }
 
