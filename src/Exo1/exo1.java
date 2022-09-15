@@ -17,4 +17,3 @@ public class exo1 {
         exo1.main(args);
     }
 }
-
