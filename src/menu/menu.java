@@ -1,13 +1,14 @@
 package menu;
 
 import Exo3.exo3;
+import Exo4.exo4;
 import utils.utils;
 import Exo1.exo1;
 
 public class menu {
     public static void main(String[] args) {
         System.out.println("Choisissez un exercice :");
-        System.out.println("1. Exercice 1 - Hello World");
+        System.out.println("1. Exercice 1");
         System.out.println("2. Exercice 2");
         System.out.println("3. Exercice 3");
         System.out.println("4. Exercice 4");
@@ -17,7 +18,7 @@ public class menu {
             case "1" -> exo1.main(args);
             case "2" -> System.out.print("Exercice 2");
             case "3" -> exo3.main(args);
-            case "4" -> System.out.print("Exercice 4");
+            case "4" -> exo4.main(args);
             case "0" -> {
                 utils.SystemOut();
             }
