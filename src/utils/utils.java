@@ -23,7 +23,7 @@ public class utils {
         Scanner scanner = new Scanner(System.in);
         System.out.print("> ");
         while (!scanner.hasNextInt()) {
-            System.out.println("Veuillez entrer un nombre");
+            System.out.println("Veuillez entrer un entier");
             System.out.print("> ");
             scanner.next();
         }
@@ -35,7 +35,7 @@ public class utils {
         Scanner scanner = new Scanner(System.in);
         System.out.print("> ");
         while (!scanner.hasNextInt()) {
-            System.out.println("Veuillez entrer un nombre");
+            System.out.println("Veuillez entrer un entier positif");
             System.out.print("> ");
             scanner.next();
         }
