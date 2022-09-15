@@ -10,6 +10,15 @@ public class utils {
         return choix;
     }
 
+    public static boolean checkBinaries(String nbr) {
+        for (int i = 0; i < nbr.length(); i++) {
+            if (nbr.charAt(i) != '0' && nbr.charAt(i) != '1') {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static int getInt() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("> ");
@@ -37,6 +46,7 @@ public class utils {
         }
         return choix;
     }
+
     public static void SystemOut() {
         System.out.print("Au revoir");
         for (int i = 0; i < 3; i++) {
