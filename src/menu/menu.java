@@ -3,6 +3,7 @@ package menu;
 import Exo2.exo2;
 import Exo3.exo3;
 import Exo4.exo4;
+import Exo6.exo6;
 import utils.utils;
 import Exo1.exo1;
 
@@ -20,6 +21,7 @@ public class menu {
             case "2" -> exo2.main(args);
             case "3" -> exo3.main(args);
             case "4" -> exo4.main(args);
+            case "6" -> exo6.main(args);
             case "0" -> {
                 utils.SystemOut();
             }
