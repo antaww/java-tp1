@@ -7,11 +7,8 @@ public class exo4 {
         float finalN = utils.getPositiveInt();
         float Un = 1;
         for (float n = 1; n <= finalN; n++) {
-            System.out.println("finalN"+finalN);
-            System.out.println("Un"+Un);
-            System.out.println("n"+n);
             Un = (Un+1)/n;
         }
-        System.out.println(Un);
+        System.out.println("Le terme n°" + (int) finalN + " de la suite est " + Math.round(Un * 10000.0) / 10000.0);
     }
 }
