@@ -4,6 +4,9 @@
 
 package Exo6;
 
+import java.io.*;
+import java.util.*;
+
 import utils.utils;
 
 public class exo6 {
@@ -15,7 +18,7 @@ public class exo6 {
         System.out.println("Entrez la taille du tableau (0 pour terminer) :");
         int taille = utils.getPositiveInt();
         if (taille == 0) {
-            utils.SystemOut();
+            utils.Continue(utils.getExoNumber());
         }
         double[][] tableau = new double[taille][taille];
         for (int i = 0; i < taille; i++) {
@@ -25,27 +28,32 @@ public class exo6 {
             }
         }
         System.out.println("\nVoici le tableau :");
-        double total = 0;
-        double rowCounter = 0;
-        double colCounter = 0;
+        double rowTotal = 0;
+        double colTotal = 0;
+        double rowAverage = 0;
+        double colAverage = 0;
         for (int i = 0; i < taille; i++) {
             for (int j = 0; j < taille; j++) {
-                System.out.print(tableau[i][j] + " ");
-                rowCounter += tableau[i][j];
+                System.out.printf("%-10.2f", tableau[i][j]);
+                rowAverage += tableau[i][j];
             }
-            System.out.println("(" + rowCounter + ")");
-            total += rowCounter;
-            rowCounter = 0;
+            rowAverage /= taille;
+            System.out.println("\u001B[31m"+ "(" + Math.round( rowAverage * 100.0) / 100.0  + ")"+"\u001B[0m");
+            rowTotal += rowAverage;
+            rowAverage = 0;
             System.out.println();
         }
         for (int i = 0; i < taille; i++) {
             for (int j = 0; j < taille; j++) {
-                colCounter += tableau[j][i];
+                colAverage += tableau[j][i];
             }
-            System.out.print("(" + colCounter + ")");
-            colCounter = 0;
+            colAverage /= taille;
+            System.out.print("\u001B[35m"+ "(" + Math.round( colAverage * 100.0) / 100.0  + ")"+"\u001B[0m");
+            colTotal += colAverage;
+            colAverage = 0;
         }
-        System.out.print("(" + total + ")");
+        System.out.print("row(" + Math.round( rowTotal * 100.0) / 100.0 + ")");
+        System.out.print("col(" + Math.round( colTotal * 100.0) / 100.0 + ")");
         utils.Continue(utils.getExoNumber());
     }
 }
