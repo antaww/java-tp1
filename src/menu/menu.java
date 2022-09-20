@@ -12,39 +12,36 @@ import Exo5.exo5;
 import Exo6.exo6;
 import utils.utils;
 
-/**
- * Il imprime un menu, demande à l'utilisateur de choisir un exercice, puis appelle la fonction principale de l'exercice
- * choisi
- */
+import java.io.File;
+
 public class menu {
+
     /**
-     * Il imprime un menu, demande à l'utilisateur de choisir un exercice, puis appelle la fonction principale de
-     * l'exercice choisi
+     * Il imprime une liste de tous les exercices du dossier, puis exécute celui que l'utilisateur choisit
      */
     public static void main(String[] args) {
         System.out.println("Choisissez un exercice :");
-        System.out.println("1. Exercice 1");
-        System.out.println("2. Exercice 2");
-        System.out.println("3. Exercice 3");
-        System.out.println("4. Exercice 4");
-        System.out.println("5. Exercice 5");
-        System.out.println("6. Exercice 6");
+        File folder = new File("src");
+        File[] listOfFiles = folder.listFiles((dir, name) -> name.toLowerCase().contains("exo"));
+        for (int i = 0; i < listOfFiles.length; i++) {
+            System.out.println((i+1) + ". Exercice " + (i+1));
+        }
         System.out.println("0. Quitter");
         String choix = utils.getString();
-        switch (choix) {
-            case "1" -> exo1.main(args);
-            case "2" -> exo2.main(args);
-            case "3" -> exo3.main(args);
-            case "4" -> exo4.main(args);
-            case "5" -> exo5.main(args);
-            case "6" -> exo6.main(args);
-            case "0" -> {
-                utils.SystemOut();
+        for (int i = 0; i < listOfFiles.length; i++) {
+            if (choix.equals(String.valueOf(i+1))) {
+                try {
+                    Class.forName("Exo" + (i+1) + ".exo" + (i+1)).getMethod("main", String[].class).invoke(null, (Object) args);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
-            default -> {
-                System.out.println("Choix invalide");
-                main(args);
-            }
+        }
+        if (choix.equals("0")) {
+            utils.SystemOut();
+        } else {
+            System.out.println("Choix invalide");
+            menu.main(args);
         }
     }
 }
