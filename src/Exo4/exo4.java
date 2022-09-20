@@ -18,5 +18,6 @@ public class exo4 {
             System.out.println("U(" + n + ") = " + Un);
         }
         System.out.println("Le terme n°" + (int) finalN + " de la suite est " + Math.round(Un * 10000.0) / 10000.0);
+        utils.Continue(utils.getExoNumber());
     }
 }

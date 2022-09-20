@@ -21,18 +21,11 @@ public class exo2 {
                 System.out.println();
                 actualRow++;
             } else {
-                for (int j = 1; j <= rowCount+3 - actualRow; j++) {
-                    System.out.print("=");
-                }
-                for(int j = 0; j < i; j++) {
-                    System.out.print("*");
-                }
-                for (int j = 1; j <= rowCount+3 - actualRow; j++) {
-                    System.out.print("=");
-                }
+                System.out.print("=".repeat(rowCount + 3 - actualRow) + "*".repeat(i) + "=".repeat(rowCount + 3 - actualRow));
             }
         }
         trunk(rowCount);
+        utils.Continue(utils.getExoNumber());
     }
 
     /**
@@ -41,23 +34,7 @@ public class exo2 {
      * @param rowCount le nombre de lignes dans l'arbre
      */
     private static void trunk(int rowCount) {
-        System.out.println();
-        for (int j = 1; j <= rowCount +3 - 1; j++) {
-            System.out.print("=");
-        }
-        System.out.print("*");
-        for (int j = 1; j <= rowCount +3 - 1; j++) {
-            System.out.print("=");
-        }
-        System.out.println();
-        for (int j = 1; j <= rowCount +3 - 2; j++) {
-            System.out.print("=");
-        }
-        for (int i = 0; i < 3; i++) {
-            System.out.print("*");
-        }
-        for (int j = 1; j <= rowCount +3 - 2; j++) {
-            System.out.print("=");
-        }
+        System.out.print("\n" + "=".repeat(rowCount + 3 - 1) + "*" + "=".repeat(rowCount + 3 - 1) + "\n"
+        + "=".repeat(rowCount+3-2) + "*".repeat(3) + "=".repeat(rowCount+3-2)+"\n");
     }
 }

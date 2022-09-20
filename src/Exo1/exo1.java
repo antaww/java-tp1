@@ -21,6 +21,6 @@ public class exo1 {
         }
         double racine = sqrt(nbr);
         System.out.println("La racine carrée de " + nbr + " est " + Math.round(racine * 1000000.0) / 1000000.0);
-        exo1.main(args);
+        utils.Continue(utils.getExoNumber());
     }
 }

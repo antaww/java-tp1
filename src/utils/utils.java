@@ -109,6 +109,56 @@ public class utils {
         }
         System.exit(0);
     }
+
+    /**
+     * Il renvoie le numéro de l'exercice en cours d'exécution
+     *
+     * @return Le numéro de l'exercice.
+     */
+    public static int getExoNumber() {
+        String className = new Throwable().getStackTrace()[1].getClassName();
+        var classChar = className.charAt(className.length() - 1);
+        int classInt = Character.getNumericValue(classChar);
+        return classInt;
+    }
+
+    /**
+     * Il permet de choisir entre quitter, revenir au menu ou relancer l'exercice
+     *
+     * @param exo le numéro d'exercice
+     */
+    public static <Int> void Continue(Int exo) {
+        System.out.println("\nQue voulez-vous faire ?");
+        System.out.println("0. Quitter");
+        System.out.println("1. Revenir au menu");
+        System.out.println("2. Relancer l'exercice");
+        String choix = utils.getString();
+        switch (choix) {
+            case "0" -> {
+                utils.SystemOut();
+            }
+            case "1" -> {
+                try {
+                    Class<?> c = Class.forName("menu.menu");
+                    c.getMethod("main", String[].class).invoke(null, (Object) null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            case "2" -> {
+                try {
+                    Class<?> c = Class.forName("Exo" + exo + ".exo" + exo);
+                    c.getMethod("main", String[].class).invoke(null, (Object) null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            default -> {
+                System.out.println("Erreur, veuillez entrer une valeur correcte...");
+                utils.Continue(exo);
+            }
+        }
+    }
 }
 
 

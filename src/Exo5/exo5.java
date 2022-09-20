@@ -29,6 +29,6 @@ public class exo5 {
             arraySum += array[i];
         }
         System.out.println("La somme du tableau est " + arraySum);
-        exo5.main(args);
+        utils.Continue(utils.getExoNumber());
     }
 }
