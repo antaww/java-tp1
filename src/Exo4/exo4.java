@@ -12,9 +12,10 @@ public class exo4 {
     public static void main(String[] args) {
         System.out.println("Entrez le nombre de terme de la suite n à calculer avec n > 0 (0 pour terminer) :");
         float finalN = utils.getPositiveInt();
-        float Un = 1;
+        float Un = 0;
         for (float n = 1; n <= finalN; n++) {
-            Un = (Un+1)/n;
+            Un = Un+(1/n);
+            System.out.println("U(" + n + ") = " + Un);
         }
         System.out.println("Le terme n°" + (int) finalN + " de la suite est " + Math.round(Un * 10000.0) / 10000.0);
         utils.Continue(utils.getExoNumber());
