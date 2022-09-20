@@ -25,6 +25,7 @@ public class exo2 {
             }
         }
         trunk(rowCount);
+        utils.Continue(utils.getExoNumber());
     }
 
     /**
@@ -34,6 +35,6 @@ public class exo2 {
      */
     private static void trunk(int rowCount) {
         System.out.print("\n" + "=".repeat(rowCount + 3 - 1) + "*" + "=".repeat(rowCount + 3 - 1) + "\n"
-        + "=".repeat(rowCount+3-2) + "*".repeat(3) + "=".repeat(rowCount+3-2));
+        + "=".repeat(rowCount+3-2) + "*".repeat(3) + "=".repeat(rowCount+3-2)+"\n");
     }
 }
