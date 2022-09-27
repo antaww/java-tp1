@@ -4,12 +4,6 @@
 
 package menu;
 
-import Exo1.exo1;
-import Exo2.exo2;
-import Exo3.exo3;
-import Exo4.exo4;
-import Exo5.exo5;
-import Exo6.exo6;
 import utils.utils;
 
 import java.io.File;
